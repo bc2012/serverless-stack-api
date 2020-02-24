@@ -26,7 +26,7 @@ provider:
   stage: dev
   region: us-east-2
   environment:
-    tableName: notes
+    tableName: ${env:DYNAMO_TABLE_NAME}
     stripeSecretKey: ${env:STRIPE_SECRET_KEY}
 
 # 'iamRoleStatements' defines the permission policy for the Lambda function.
